@@ -15,5 +15,10 @@ To prevent duplication and configuration drift across different AI agent framewo
 2. **Canonical Workflow Specifications:**
    - The step-by-step instructions and triggers for tasks (setup, scrape, rank, apply, upskill, interview) are defined in the [.claude/](.claude/) directory (specifically under `.claude/skills/` and `.claude/commands/`).
    - Do not duplicate these rules or specifications. Treat `.claude/` files as the single source of truth.
-3. **Portal Search Skills:**
-   - Job-portal search CLIs live under [.agents/skills/](.agents/skills/) in the portable Agent Skills format (with a `SKILL.md` per portal). Codex and Antigravity discover these automatically; the `/scrape` workflow in [.claude/skills/job-scraper/](.claude/skills/job-scraper/) orchestrates them.
+3. **Portal Search Skills & Company Watchlist:**
+   - Job-portal search CLIs live under [.agents/skills/](.agents/skills/) in the portable Agent Skills format.
+   - Includes pure-Python LinkedIn search engine and `company-careers-watch` for direct ATS tracking.
+4. **Telegram Mobile Bot & Multi-LLM Runtime:**
+   - The workspace can be operated from any mobile device via the Telegram Bot in `bot/main.py`.
+   - Supports Gemini Pro (`GEMINI_API_KEY`) and Claude (`ANTHROPIC_API_KEY`).
+   - Setup guide available in [TELEGRAM_SETUP.md](TELEGRAM_SETUP.md).

@@ -38,6 +38,8 @@ SPELLING_VARIANTS = {
 STRIP_PATTERNS = [
     r"\ba/s\b", r"\baps\b", r"\bi/s\b", r"\bp/s\b", r"\bk/s\b",
     r"\bivs\b", r"\bamba\b", r"\ba\.m\.b\.a\.?\b",
+    r"\bpvt\s+ltd\b", r"\bpvt\.\s*ltd\b", r"\bltd\b", r"\bllp\b",  # Indian corporate entities
+    r"\bindia\b",
     r"\(vg\)", r"\(.*?\)",  # (VG) and other parentheticals
     r"\bdanmark\b", r"\bdenmark\b", r"\bscandinavia\b", r"\bnordic\b",
     r"\bgroup\b", r"\bholding\b",

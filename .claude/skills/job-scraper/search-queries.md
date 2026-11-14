@@ -12,42 +12,37 @@ The `site:` query templates in this file are the **WebSearch fallback** — for 
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Primary (Indian & Global tech job boards):
+- **LinkedIn (jobs-guest unauthenticated)** - Pure-Python scraper active for Bengaluru, Ahmedabad, Gandhinagar, Pune, Mumbai, Hyderabad, Remote
+- **Company Careers Watch** - Direct ATS queries for 12+ Indian tech employers (`.agents/skills/company-careers-watch/watchlist.json`)
+- **freehire.me** - Multi-market ATS aggregator
 
 Secondary (company career pages via Google):
 - Direct Google searches with `site:` filters for known target companies
 
 ## Query Categories
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+### Priority 1: Backend & Software Engineering (Core)
 
-Each priority has two kinds of block. **Plain terms** blocks are what the portal CLIs consume: one term per line, one CLI call per term, no `OR`, no `site:` prefix, and no location (the CLI's location flag, or the city in `--query` where that portal's SKILL.md says so, carries it). Quote a multi-word phrase only if the portal's `Query syntax:` line says quoting is honoured. **WebSearch-only** blocks are Google syntax (`site:`, quotes, `OR`) for the fallback path and are never passed to a CLI.
-
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
-
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
+These match your strongest and most desired career direction (1–3+ years experience).
 
 #### Plain terms (portal CLIs)
 
 ```
-[YOUR_PRIMARY_JOB_TITLE_1]
-[YOUR_PRIMARY_JOB_TITLE_2]
-[YOUR_KEY_SKILL]
+Backend Engineer
+Software Engineer
+Python Developer
+Backend Developer
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
+site:linkedin.com/jobs "Backend Engineer" "Bengaluru" OR "Ahmedabad" OR "Gandhinagar" OR "Pune" OR "Remote"
+site:linkedin.com/jobs "Software Engineer" "India"
+site:boards.greenhouse.io "Backend Engineer" "India"
+site:jobs.lever.co "Software Engineer" "India"
+```
 ```
 
 ### Priority 2: [YOUR_DOMAIN_EXPERTISE]

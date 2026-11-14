@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Jainish Chauhan
 
 <!-- SETUP: This file is populated by running /setup -->
 <!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Jainish Chauhan, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,76 +16,81 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Jainish Chauhan
+- **Location:** Ahmedabad, Gujarat, India (Preferred: Ahmedabad / Gandhinagar / Bengaluru / Hyderabad / Pune / Mumbai / Remote)
+- **Salary expectation:** [X]-[Y] LPA (₹[X]-[Y] Lakhs Per Annum)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | English | Professional working proficiency |
+  | Hindi | Native / Fluent |
+  | Gujarati | Native / Fluent |
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Actively seeking Backend Engineer / Software Engineer roles
+- **LinkedIn headline:** "Backend Engineer | Software Engineer"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Bachelor of Science in Computer Science** (06/2020-01/2024) - Institute of Technology, Nirma University
+  - Grade: 8.13 PPI
+  - Location: Ahmedabad, Gujarat
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Software Engineer** (01/2024 - Present) - **Crest Data** (Ahmedabad, Gujarat)
+  - **DataBee – Cloud-Native Security, Risk & Compliance Data Platform** (Go, React JS, Postgres):
+    - Developed user provisioning and authentication workflows for a multi-tenant architecture, supporting both federated (Okta) and local user authentication, including tenant-level user creation and management.
+    - Implemented Okta integration for Just-in-Time (JIT) user provisioning, validating users against Okta during tenant creation and login, and automatically creating users in DataBee if they exist in Okta but are not yet registered in the platform.
+    - Developed user deactivation, reactivation, and deletion workflows with a 90-day retention policy, including a daily scheduled cron job to permanently delete expired users.
+  - **Sprint Analyzer – Multi-Agent Planning & Risk System** (Python, LLM, RAG):
+    - Architected an event-driven orchestrator integrating Jira, GitLab, and Google Chat to run parallel sprint health scans twice daily and send reports in Google Chat.
+    - Engineered a Capacity Agent to calculate leave-adjusted engineer bandwidth from sprint and attendance data, match tickets with domain expertise, and flag workload over-allocation to prevent sprint bottlenecks.
+    - Built a hybrid Backlog Agent combining deterministic filtering and LLM reasoning to optimize sprint capacity through semantic ticket matching and prioritized recommendations with natural-language rationale.
+  - **Netskope Webcore Authentication Service** (Go, PostgreSQL, Redis, Kafka):
+    - Implemented user lifecycle APIs (Create/Update/Delete) for a multi-tenant authentication system supporting Normal and SAML users with encrypted username storage.
+    - Built Tenant Provisioning API with strict validation to ensure secure onboarding and tenant-level data isolation.
+    - Developed Kafka-based tenant deprovisioning flow to disable tenants, clear Redis cache, and remove Vault secrets before permanent deletion.
+  - **Party Plan (Event Management Platform)** (NestJS, ReactJS, PostgreSQL, Stripe):
+    - Designed complete authentication system (JWT, email verification, Google OAuth) and structured modular monolithic backend architecture from project setup.
+    - Built Review Module end-to-end (Frontend + DB schema + APIs) ensuring only completed bookings could submit feedback.
+    - Developed Hotel Booking Module integrating Zentrumhub with Stripe payments for secure transaction handling.
+    - Implemented idempotent booking APIs and failure-handling logic to prevent duplicate bookings and payment inconsistencies.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Go, Python, Node.js, TypeScript, JavaScript, PostgreSQL
+- **Secondary:** NestJS, Gin, Express.js, MongoDB, React JS
+- **Domain:** Backend Engineering, Multi-Tenant Systems, Authentication & Identity (Okta, SAML, OAuth, JWT), Event-Driven Architecture, LLM & RAG Orchestration
+- **Software:** Redis, Kafka, Docker, GitHub Actions, Postman, Vault, Jira, GitLab
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- N/A
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- N/A
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- **CAP (Crest Appreciation Program) Award** - Crest Data - Awarded for outstanding contributions to the successful delivery of high-priority features under tight deadlines in a full-stack project.
+- **Competitive Programming Profiles:** LeetCode (1394 contest rating), HackerRank (4 star in Problem Solving), Codeforces (913 contest rating).
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Deliverer under pressure** - Demonstrated capability to deliver high-priority features under tight deadlines, earning organizational recognition (CAP Award).
+- **Systematic & Security-Focused** - Prioritizes secure multi-tenant isolation, idempotent APIs, robust error-handling, and clear backend modularity.
+- **Strengths:** RESTful API design, multi-tenant auth architecture, event-driven orchestration, AI/LLM system integration, problem-solving.
+- **Growth areas:** Expanding deep expertise in cloud infrastructure and large-scale distributed system optimization.
+- **Thrives in:** High-growth technical teams building modular backend platforms, security/data orchestration layers, and AI-driven workflow engines.
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building scalable, resilient backend services and event-driven architectures.
+- Integrating modern AI/LLM patterns (RAG, multi-agent systems) into practical production systems.
 
-### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+### Target Sectors (India & Global)
+- **High-Growth Startups & Unicorns:** Razorpay, Swiggy, Zepto, CRED, Meesho, Groww, Zerodha, PhonePe, BharatPe
+- **MNC Engineering Centers:** Oracle, Google, Microsoft, Amazon, Goldman Sachs, JP Morgan tech hubs
+- **Tech Product & Infrastructure:** Postman, Druva, Whatfix, BrowserStack, Clevertap
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Mandatory office relocation outside preferred cities (Bengaluru, Hyderabad, Mumbai, Pune, Ahmedabad, Gandhinagar) unless fully remote
+- Extended bond/service agreements
+- Pure legacy maintenance / non-engineering roles without growth
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
@@ -141,7 +146,7 @@ Both documents MUST be compiled and visually inspected via the Read tool on the 
 
 ### ATS & keyword verification (CV)
 ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `python3 tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.txt` (pypdf, then `pdftotext -layout -enc UTF-8`) and verify what a parser sees. If both extractors are missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
-- [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but absent from the extraction
+- [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `` replacement characters, or text visible in the PDF but absent from the extraction
 - [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to ATS)
 - [ ] Reading order of the extracted text matches the visual order (single-column stock template is safe; multi-column custom templates are where this breaks)
 - [ ] Posting keywords covered or honestly absent - synonym-only matches tightened to the posting's exact term where truthfully applicable, keywords the profile genuinely supports added to experience bullets, genuine gaps left visible and **never stuffed**

@@ -1,0 +1,64 @@
+{
+  "companies": [
+    {
+      "name": "Razorpay",
+      "ats": "greenhouse",
+      "slug": "razorpaysoftwareprivatelimited",
+      "careers_url": "https://razorpay.com/jobs/"
+    },
+    {
+      "name": "InMobi",
+      "ats": "greenhouse",
+      "slug": "inmobi",
+      "careers_url": "https://www.inmobi.com/company/careers"
+    },
+    {
+      "name": "Rubrik",
+      "ats": "greenhouse",
+      "slug": "rubrik",
+      "careers_url": "https://www.rubrik.com/company/careers"
+    },
+    {
+      "name": "Druva",
+      "ats": "greenhouse",
+      "slug": "druva",
+      "careers_url": "https://www.druva.com/about/careers"
+    },
+    {
+      "name": "Groww",
+      "ats": "greenhouse",
+      "slug": "groww",
+      "careers_url": "https://groww.in/careers"
+    },
+    {
+      "name": "Stripe",
+      "ats": "greenhouse",
+      "slug": "stripe",
+      "careers_url": "https://stripe.com/jobs"
+    },
+    {
+      "name": "Cloudflare",
+      "ats": "greenhouse",
+      "slug": "cloudflare",
+      "careers_url": "https://www.cloudflare.com/careers/"
+    },
+    {
+      "name": "Canonical",
+      "ats": "greenhouse",
+      "slug": "canonical",
+      "careers_url": "https://canonical.com/careers"
+    },
+    {
+      "name": "Coinbase",
+      "ats": "greenhouse",
+      "slug": "coinbase",
+      "careers_url": "https://www.coinbase.com/careers"
+    },
+    {
+      "name": "Datadog",
+      "ats": "greenhouse",
+      "slug": "datadog",
+      "careers_url": "https://www.datadoghq.com/careers/"
+    }
+  ]
+}
