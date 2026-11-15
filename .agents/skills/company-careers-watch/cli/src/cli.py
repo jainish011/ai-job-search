@@ -95,12 +95,13 @@ def filter_jobs(
         parts = re.split(r'\s+(?:or|OR)\s+|[,|]', query)
         subqueries = [p.strip().lower() for p in parts if p.strip()]
 
-    loc_lower = location_filter.lower() if location_filter else None
+    loc_lower = location_filter.lower().strip() if location_filter else None
     today = datetime.date.today()
 
-    default_indian_locations = [
-        "india", "bangalore", "bengaluru", "hyderabad", "pune", "mumbai",
-        "delhi", "gurgaon", "gurugram", "noida", "ahmedabad", "chennai", "remote"
+    # Target physical tech hubs in India (strictly city-based; remote is excluded)
+    target_indian_cities = [
+        "bangalore", "bengaluru", "hyderabad", "pune", "mumbai",
+        "delhi", "gurgaon", "gurugram", "noida", "ahmedabad", "gandhinagar", "chennai"
     ]
     
     non_tech_exclusions = [
@@ -115,13 +116,19 @@ def filter_jobs(
         title_desc = f"{t_lower} {desc_lower}"
         job_loc = (j.get("location") or "").lower()
 
-        # 1. Location match:
+        # 1. Location match: Strictly city-based, no remote jobs
+        if "remote" in job_loc or "remote" in t_lower or "home based" in job_loc:
+            continue
+
         if loc_lower:
-            if loc_lower not in job_loc and "remote" not in job_loc and "india" not in job_loc:
+            # If remote was requested as a location filter, exclude for ATS
+            if loc_lower == "remote":
+                continue
+            if loc_lower not in job_loc:
                 continue
         else:
-            # If no specific location asked, ensure role is in India or Remote
-            if not any(loc in job_loc for loc in default_indian_locations):
+            # Ensure role is located in one of our target Indian cities
+            if not any(city in job_loc for city in target_indian_cities):
                 continue
 
         # 2. Query / Role match:

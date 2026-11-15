@@ -18,6 +18,8 @@ listed in `.agents/skills/company-careers-watch/watchlist.json`.
 Unlike scraping HTML or relying on third-party aggregators, this queries the official, public
 ATS board APIs (e.g. Greenhouse, Lever) utilized by top Indian tech employers.
 
+Location policy: Strictly targets on-site / hybrid openings in key Indian cities (Bengaluru, Hyderabad, Pune, Mumbai, Ahmedabad, Gandhinagar, Delhi/NCR, Chennai). Remote and Home-based jobs are explicitly excluded from company ATS search.
+
 ## Usage
 
 ```bash

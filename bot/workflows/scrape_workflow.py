@@ -97,10 +97,12 @@ class ScrapeWorkflow(BaseWorkflow):
                         except Exception:
                             continue
                     
+                    # For company ATS platforms, ignore 'remote' and focus strictly on physical cities
+                    cw_loc = location if (location and location.strip().lower() != "remote") else None
                     return cw_module.filter_jobs(
                         cw_jobs,
                         query=query,
-                        location_filter=location,
+                        location_filter=cw_loc,
                         max_days=14  # Active openings on company boards
                     )
 
