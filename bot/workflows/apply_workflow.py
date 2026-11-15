@@ -165,7 +165,8 @@ class ApplyWorkflow(BaseWorkflow):
         if compiler:
             try:
                 cmd = [compiler, "-interaction=nonstopmode"]
-                if "miktex" in compiler.lower() or "pdflatex" in compiler.lower():
+                # Only MiKTeX supports --enable-installer; standard Linux TeX Live does not
+                if "miktex" in compiler.lower():
                     cmd.append("--enable-installer")
                 cmd.append(cv_tex_path.name)
 

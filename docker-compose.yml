@@ -1,0 +1,12 @@
+services:
+  job-bot:
+    build: .
+    container_name: ai-job-search-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist generated CVs, cover letters and scraper history on host machine
+      - ./cv:/app/cv
+      - ./cover_letters:/app/cover_letters
+      - ./job_scraper:/app/job_scraper
